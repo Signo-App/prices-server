@@ -1,7 +1,7 @@
 # Prices Server
 
-Scripts to fetch price info and serve it to the Sumero UI.
+Scripts to fetch price info and serve it to the Sumero UI. This is expected to be run on a Linux machine running apache, with a cron job calling the `fetch_and_store.sh` script regularly. The server should run on the same domain as the interface is served from, and have a regular, non-open CORS policy.
 
-Expects a file `key` containing an api key for the cryptowatch price platform.
+The script writes price info to `/var/www/htlm/prices.json`, which the interface is expected to fetch as needed.
 
-This will insert a prices.json into a /var/www/html/, which assumes the server is running apache.
+It expects a file `key` containing an api key for the cryptowatch price platform.
