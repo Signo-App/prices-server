@@ -1,5 +1,6 @@
 {
     "priceIdentifiers": [
-        "ethusd"
+        "ethusd",
+        "btcusd"
     ]
 }
