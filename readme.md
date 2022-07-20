@@ -7,3 +7,13 @@ Scripts to fetch price info and serve it to the Sumero UI. This is expected to b
 The script writes price info to `/var/www/htlm/prices.json`, which the interface is expected to fetch as needed.
 
 It expects a file `key` containing an api key for the cryptowatch price platform.
+
+### For Testing Integration: Allow CORS from anywhere on apache2
+
+Enable Headers
+
+    sudo a2enmod headers
+
+Add header inside <Directory> in apache.config or .htaccess
+
+    Header set Access-Control-Allow-Origin "*" 
