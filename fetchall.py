@@ -3,7 +3,7 @@ from pprint import pprint
 
 def loadKey():
     with open('key','r') as f:
-        return f.read()
+        return f.read().strip()
 
 def loadConfig():
     with open('config.json','r') as f:
